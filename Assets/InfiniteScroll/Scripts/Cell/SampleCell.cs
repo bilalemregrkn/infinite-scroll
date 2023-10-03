@@ -1,13 +1,16 @@
 using TMPro;
 using UnityEngine;
 
-public class SampleCell : BaseCell
+namespace UI.InfiniteScroll
 {
-    [SerializeField] private TextMeshProUGUI textMeshProUGUI;
-
-    public override void UpdateDisplay(int index)
+    public class SampleCell : BaseCell
     {
-        base.UpdateDisplay(index);
-        textMeshProUGUI.SetText($"{index + 1}");
+        [SerializeField] private TextMeshProUGUI textMeshProUGUI;
+
+        public override void UpdateDisplay(int index)
+        {
+            base.UpdateDisplay(index);
+            textMeshProUGUI.SetText($"{index + 1}");
+        }
     }
 }
